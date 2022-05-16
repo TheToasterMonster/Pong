@@ -17,6 +17,8 @@ public class RightPlayer : MonoBehaviour
         height = Camera.main.orthographicSize - transform.localScale.y / 2;
         score = 0;
 
+        transform.position = new Vector3(Camera.main.orthographicSize * Camera.main.aspect * .875f, 0, 0);
+
         Ball ball = FindObjectOfType<Ball>();
         ball.rightScore += onRightScore;
     }
